@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Surface Cleaning</title>
 
 <style>
@@ -12,54 +11,77 @@
 box-sizing:border-box;
 }
 
-html, body{
+html,body{
 margin:0;
 padding:0;
 height:100%;
+background:#000;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
 }
 
-/* TAUSTA */
+/* KOKO SIVU */
 
-body{
-background:
-linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-url("SurfaceCleaning_seo.jpg") center center / cover no-repeat;
+.page{
 min-height:100vh;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
+padding:40px 20px;
+}
+
+/* TAUSTAKUVA (EI SKAALAUDU) */
+
+.hero{
+position:relative;
+width:1200px;
+height:675px;
+max-width:100%;
+background:url("SurfaceCleaning_seo.jpg") center no-repeat;
+background-size:contain;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* TUMMA OVERLAY */
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.6);
 }
 
 /* SISÄLTÖ */
 
-.container{
+.content{
+position:relative;
 text-align:center;
-padding:40px;
 max-width:700px;
+padding:30px;
 }
 
 /* LOGO */
 
 .logo{
-width:420px;
+width:380px;
 max-width:80%;
 margin-bottom:40px;
 }
 
-/* TEKSTI */
+/* TEKSTIT */
 
 h1{
-font-size:46px;
-margin-bottom:25px;
+font-size:44px;
+margin-bottom:20px;
 }
 
 p{
 font-size:20px;
 line-height:1.7;
 color:#ddd;
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .small{
@@ -73,16 +95,21 @@ color:#aaa;
 
 @media (max-width:700px){
 
+.hero{
+height:auto;
+aspect-ratio:16/9;
+}
+
+.logo{
+width:240px;
+}
+
 h1{
-font-size:34px;
+font-size:30px;
 }
 
 p{
 font-size:18px;
-}
-
-.logo{
-width:260px;
 }
 
 }
@@ -92,7 +119,11 @@ width:260px;
 
 <body>
 
-<div class="container">
+<div class="page">
+
+<div class="hero">
+
+<div class="content">
 
 <img class="logo" src="SurfaceCleaning_logo_02.png">
 
@@ -110,6 +141,10 @@ kuluneista vuosista.
 
 <div class="small">
 Surface Cleaning
+</div>
+
+</div>
+
 </div>
 
 </div>
