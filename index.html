@@ -1,146 +1,164 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surface Cleaning</title>
 
-  <style>
-    *{
-      box-sizing:border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    html, body{
-      margin:0;
-      padding:0;
-      background:#040402;
-      font-family:Arial, Helvetica, sans-serif;
-      color:#fff;
-    }
+<title>Surface Cleaning</title>
 
-    .hero{
-      position:relative;
-      width:100%;
-    }
+<style>
 
-    .hero picture,
-    .hero img{
-      display:block;
-      width:100%;
-      height:auto;
-    }
+*{
+box-sizing:border-box;
+}
 
-    .overlay{
-      position:absolute;
-      left:50%;
-      bottom:18%;
-      transform:translateX(-50%);
-      width:min(90%, 760px);
-      text-align:center;
-      padding:24px 20px;
-    }
+html,body{
+margin:0;
+padding:0;
+background:#040402;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+}
 
-    .overlay h1{
-      margin:0 0 18px;
-      font-size:42px;
-      line-height:1.1;
-    }
+/* HERO */
 
-    .overlay p{
-      margin:0 0 12px;
-      font-size:20px;
-      line-height:1.7;
-      color:#e0e0e0;
-    }
+.hero{
+position:relative;
+width:100%;
+}
 
-    .overlay .small{
-      margin-top:22px;
-      font-size:14px;
-      letter-spacing:1px;
-      color:#b8b8b8;
-    }
+.hero img{
+width:100%;
+display:block;
+}
+
+/* DESKTOP TEKSTI */
+
+.overlay{
+position:absolute;
+bottom:20%;
+left:50%;
+transform:translateX(-50%);
+max-width:720px;
+text-align:center;
+padding:20px;
+}
+
+/* MOBILE TEKSTI */
 
 .mobile-text{
 display:none;
-max-width:760px;
-margin:0 auto;
-padding:10px 20px 80px;
+max-width:720px;
+margin:auto;
+padding:40px 20px 60px;
 text-align:center;
 background:#040402;
-margin-top:-120px;
 }
 
-    .mobile-text h1{
-      margin:0 0 18px;
-      font-size:30px;
-      line-height:1.15;
-    }
+/* TEKSTIT */
 
-    .mobile-text p{
-      margin:0 0 14px;
-      font-size:18px;
-      line-height:1.7;
-      color:#d6d6d6;
-    }
+h1{
+font-size:42px;
+margin-bottom:20px;
+}
 
-    .mobile-text .small{
-      margin-top:22px;
-      font-size:12px;
-      letter-spacing:1px;
-      color:#9a9a9a;
-    }
+p{
+font-size:20px;
+line-height:1.7;
+color:#e0e0e0;
+margin-bottom:12px;
+}
 
-    @media (max-width:700px){
-      .overlay{
-        display:none;
-      }
+.small{
+margin-top:25px;
+font-size:14px;
+letter-spacing:1px;
+color:#bcbcbc;
+}
 
-      .mobile-text{
-        display:block;
-      }
-    }
-  </style>
+/* MOBILE */
+
+@media (max-width:700px){
+
+.overlay{
+display:none;
+}
+
+.mobile-text{
+display:block;
+margin-top:-80px;
+padding-top:0;
+}
+
+h1{
+font-size:30px;
+}
+
+p{
+font-size:18px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <section class="hero">
-    <picture>
-      <source media="(max-width:700px)" srcset="hero-mobile.jpg">
-      <img src="hero-desktop.jpg" alt="Surface Cleaning">
-    </picture>
+<div class="hero">
 
-    <div class="overlay">
-      <h1>Kiitos yhteistyöstä</h1>
+<picture>
 
-      <p>
-        Surface Cleaning -toiminta on päättynyt yrittäjän siirtyessä
-        armeijapalveluksen jälkeen uusiin tehtäviin.
-      </p>
+<source media="(max-width:700px)" srcset="hero-mobile.jpg">
 
-      <p>
-        Lämmin kiitos kaikille asiakkaille ja yhteistyökumppaneille
-        kuluneista vuosista.
-      </p>
+<img src="hero-desktop.jpg" alt="Surface Cleaning">
 
-      <div class="small">Surface Cleaning</div>
-    </div>
-  </section>
+</picture>
 
-  <section class="mobile-text">
-    <h1>Kiitos yhteistyöstä</h1>
+<div class="overlay">
 
-    <p>
-      Surface Cleaning -toiminta on päättynyt yrittäjän siirtyessä
-      armeijapalveluksen jälkeen uusiin tehtäviin.
-    </p>
+<h1>Kiitos yhteistyöstä</h1>
 
-    <p>
-      Lämmin kiitos kaikille asiakkaille ja yhteistyökumppaneille
-      kuluneista vuosista.
-    </p>
+<p>
+Surface Cleaning -toiminta on päättynyt yrittäjän siirtyessä
+armeijapalveluksen jälkeen uusiin tehtäviin.
+</p>
 
-    <div class="small">Surface Cleaning</div>
-  </section>
+<p>
+Lämmin kiitos kaikille asiakkaille ja yhteistyökumppaneille
+kuluneista vuosista.
+</p>
+
+<div class="small">
+Surface Cleaning
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mobile-text">
+
+<h1>Kiitos yhteistyöstä</h1>
+
+<p>
+Surface Cleaning -toiminta on päättynyt yrittäjän siirtyessä
+armeijapalveluksen jälkeen uusiin tehtäviin.
+</p>
+
+<p>
+Lämmin kiitos kaikille asiakkaille ja yhteistyökumppaneille
+kuluneista vuosista.
+</p>
+
+<div class="small">
+Surface Cleaning
+</div>
+
+</div>
 
 </body>
 </html>
