@@ -1,108 +1,64 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Surface Cleaning</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-}
-
-html,body{
+body{
 margin:0;
-padding:0;
-height:100%;
-background:#000;
 font-family:Arial, Helvetica, sans-serif;
+background:#040402;
 color:white;
+text-align:center;
 }
 
-/* KOKO SIVU */
-
-.page{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px 20px;
-}
-
-/* TAUSTAKUVA (EI SKAALAUDU) */
+/* HERO */
 
 .hero{
-position:relative;
-width:1200px;
-height:675px;
-max-width:100%;
-background:url("SurfaceCleaning_seo.jpg") center no-repeat;
-background-size:contain;
-display:flex;
-align-items:center;
-justify-content:center;
+width:100%;
 }
 
-/* TUMMA OVERLAY */
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.6);
+.hero img{
+width:100%;
+height:auto;
+display:block;
 }
 
-/* SISÄLTÖ */
+/* CONTENT */
 
 .content{
-position:relative;
-text-align:center;
 max-width:700px;
-padding:30px;
+margin:auto;
+padding:60px 20px;
 }
-
-/* LOGO */
-
-.logo{
-width:380px;
-max-width:80%;
-margin-bottom:40px;
-}
-
-/* TEKSTIT */
 
 h1{
-font-size:44px;
+font-size:42px;
 margin-bottom:20px;
 }
 
 p{
 font-size:20px;
 line-height:1.7;
-color:#ddd;
-margin-bottom:12px;
+color:#d0d0d0;
+margin-bottom:16px;
 }
 
 .small{
-margin-top:25px;
+margin-top:30px;
 font-size:14px;
+color:#888;
 letter-spacing:1px;
-color:#aaa;
 }
 
 /* MOBILE */
 
 @media (max-width:700px){
-
-.hero{
-height:auto;
-aspect-ratio:16/9;
-}
-
-.logo{
-width:240px;
-}
 
 h1{
 font-size:30px;
@@ -115,17 +71,30 @@ font-size:18px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="page">
+
+<!-- HERO IMAGE -->
 
 <div class="hero">
 
-<div class="content">
+<picture>
 
-<img class="logo" src="SurfaceCleaning_logo_02.png">
+<source media="(max-width:700px)" srcset="hero-mobile.jpg">
+
+<img src="hero-desktop.jpg" alt="Surface Cleaning">
+
+</picture>
+
+</div>
+
+
+<!-- TEXT -->
+
+<div class="content">
 
 <h1>Kiitos yhteistyöstä</h1>
 
@@ -145,9 +114,6 @@ Surface Cleaning
 
 </div>
 
-</div>
-
-</div>
 
 </body>
 </html>
