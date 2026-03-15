@@ -3,55 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Surface Cleaning</title>
 
 <style>
 
-body{
+*{
+box-sizing:border-box;
+}
+
+html, body{
 margin:0;
+padding:0;
+height:100%;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
+}
+
+/* TAUSTA */
+
+body{
 background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-url("SurfaceCleaning_seo.jpg") center/cover no-repeat;
+linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+url("SurfaceCleaning_seo.jpg") center center / cover no-repeat;
 min-height:100vh;
 display:flex;
-flex-direction:column;
-}
-
-header{
-padding:30px 40px;
-}
-
-header img{
-height:70px;
-}
-
-main{
-flex:1;
-display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
+}
+
+/* SISÄLTÖ */
+
+.container{
 text-align:center;
 padding:40px;
+max-width:700px;
 }
 
-.content{
-max-width:700px;
-background:rgba(0,0,0,0.4);
-padding:40px;
-border-radius:12px;
+/* LOGO */
+
+.logo{
+width:420px;
+max-width:80%;
+margin-bottom:40px;
 }
+
+/* TEKSTI */
 
 h1{
-font-size:40px;
-margin-bottom:20px;
+font-size:46px;
+margin-bottom:25px;
 }
 
 p{
 font-size:20px;
 line-height:1.7;
 color:#ddd;
+margin-bottom:15px;
 }
 
 .small{
@@ -61,18 +69,32 @@ letter-spacing:1px;
 color:#aaa;
 }
 
+/* MOBILE */
+
+@media (max-width:700px){
+
+h1{
+font-size:34px;
+}
+
+p{
+font-size:18px;
+}
+
+.logo{
+width:260px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<img src="SurfaceCleaning_logo_02.png" alt="Surface Cleaning">
-</header>
+<div class="container">
 
-<main>
-
-<div class="content">
+<img class="logo" src="SurfaceCleaning_logo_02.png">
 
 <h1>Kiitos yhteistyöstä</h1>
 
@@ -91,8 +113,6 @@ Surface Cleaning
 </div>
 
 </div>
-
-</main>
 
 </body>
 </html>
